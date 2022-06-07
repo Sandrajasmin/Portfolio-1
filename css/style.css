@@ -14,7 +14,7 @@ h1 {
 
 h2 {
     font-family: "Raleway", sans-serif;
-    font-size: 36px;
+    font-size: 30px;
     font-weight: lighter;
     color: white;
     margin: 0;
@@ -113,14 +113,12 @@ body {
 }
 
 
-.container .card .icon .fa {
+.container .card .fa {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    font-size: 80px;
     transition: 0.7s;
-    color: #fff;
 }
 
 .content_img {
@@ -132,21 +130,19 @@ body {
     transform: translate(-50%, -50%);
     font-size: 80px;
     transition: 0.7s;
-    color: #fff;
 }
 
 /* SHINE EFFECT*/
-.fab {
+.content_icon {
     width: 280px;    
     margin-top: 10px;
     padding: 10px 0 10px 0;
     background-color: rgba(67,147,217,1);
     position: relative;
     overflow: hidden;
-    color: #fff;
 }
 
-.fab:after {
+.content_icon:after {
     content: "";
     position: absolute;
     top: -110%;
@@ -166,7 +162,7 @@ body {
     );
 }
 
-.fab:hover:after {
+.content_icon:hover:after {
     opacity: 1;
     top: -30%;
     left: -30%;
@@ -175,7 +171,7 @@ body {
     transition-timing-function: ease;
 }
   
-.fab:active:after {
+.content_icon:active:after {
     opacity: 0;
 }
 
@@ -188,7 +184,6 @@ body {
 
 .container .card .face.face1 {
     position: relative;
-    background: #333;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -250,10 +245,20 @@ body {
     color: #414141;
 }
 
+/* CONTACT */
+
+.contact_icons {
+    
+}
+
 /* TABLET */
 @media screen and (min-width: 481px) { 
     .inner {
         width: 600px;
+    }
+
+    .content_img, .container .card .face {
+        width: 500px;
     }
 }
   
@@ -269,6 +274,24 @@ body {
         height: 94px;
         margin-top: -50px;
     }
+
+    .portfolio-content {
+        margin: 0;
+        padding: 0;
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;  
+    }
+    
+    .content_img, .container .card .face {
+        width: 900px;
+    }
+
+    .content_img {
+        height: 400px;
+    }
+
 }
   
   /* BIG SCREEN*/
