@@ -247,8 +247,13 @@ body {
 
 /* CONTACT */
 
-.contact_icons {
-    
+.contact_links {
+    display: flex;
+    justify-content: center;
+}
+
+.contact_icon {
+    padding: 20px 20px 20px 20px;
 }
 
 /* TABLET */
