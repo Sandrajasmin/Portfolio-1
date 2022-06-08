@@ -1,0 +1,84 @@
+/* SHINE GITHUB ICON*/
+.content_icon {
+    width: 280px;    
+    margin-top: 10px;
+    padding: 10px 0 10px 0;
+    background-color: rgba(67,147,217,1);
+    position: relative;
+    overflow: hidden;
+}
+
+.content_icon:after {
+    content: "";
+    position: absolute;
+    top: -110%;
+    left: -210%;
+    width: 500%;
+    height: 500%;
+    opacity: 0;
+    transform: rotate(30deg);
+    
+    background: rgba(255, 255, 255, 0.13);
+    background: linear-gradient(
+      to right, 
+      rgba(255, 255, 255, 0.13) 0%,
+      rgba(255, 255, 255, 0.13) 77%,
+      rgba(255, 255, 255, 0.5) 92%,
+      rgba(255, 255, 255, 0.0) 100%
+    );
+}
+
+.content_icon:hover:after {
+    opacity: 1;
+    top: -30%;
+    left: -30%;
+    transition-property: left, top, opacity;
+    transition-duration: 0.7s, 0.7s, 0.15s;
+    transition-timing-function: ease;
+}
+  
+.content_icon:active:after {
+    opacity: 0;
+}
+
+/* SHINE CONTACT*/
+.contact_icon {
+    position: relative;
+    overflow: hidden;
+    border-radius: 5px;
+    color: #fff;
+} 
+
+.contact_icon:after {
+  content: "";
+  position: absolute;
+  top: -110%;
+  left: -210%;
+  width: 200%;
+  height: 200%;
+  opacity: 0;
+  transform: rotate(30deg);
+  
+  background: rgba(255, 255, 255, 0.13);
+  background: linear-gradient(
+    to right, 
+    rgba(255, 255, 255, 0.13) 0%,
+    rgba(255, 255, 255, 0.13) 77%,
+    rgba(255, 255, 255, 0.5) 92%,
+    rgba(255, 255, 255, 0.0) 100%
+  );
+}
+
+.contact_icon:hover:after {
+    opacity: 1;
+    top: -30%;
+    left: -30%;
+    transition-property: left, top, opacity;
+    transition-duration: 0.7s, 0.7s, 0.15s;
+    transition-timing-function: ease;
+  }
+
+  
+.contact_icon:active:after {
+    opacity: 0;
+  }

@@ -1,10 +1,13 @@
 @import url(/css/import/animation.css);
+@import url(/css/import/shine.css);
+@import url(/css/import/contact.css);
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     scroll-behavior: smooth;
 }
+
 h1 {
     font-family: "Raleway", sans-serif;
     font-size: 80px;
@@ -132,49 +135,6 @@ body {
     transition: 0.7s;
 }
 
-/* SHINE EFFECT*/
-.content_icon {
-    width: 280px;    
-    margin-top: 10px;
-    padding: 10px 0 10px 0;
-    background-color: rgba(67,147,217,1);
-    position: relative;
-    overflow: hidden;
-}
-
-.content_icon:after {
-    content: "";
-    position: absolute;
-    top: -110%;
-    left: -210%;
-    width: 500%;
-    height: 500%;
-    opacity: 0;
-    transform: rotate(30deg);
-    
-    background: rgba(255, 255, 255, 0.13);
-    background: linear-gradient(
-      to right, 
-      rgba(255, 255, 255, 0.13) 0%,
-      rgba(255, 255, 255, 0.13) 77%,
-      rgba(255, 255, 255, 0.5) 92%,
-      rgba(255, 255, 255, 0.0) 100%
-    );
-}
-
-.content_icon:hover:after {
-    opacity: 1;
-    top: -30%;
-    left: -30%;
-    transition-property: left, top, opacity;
-    transition-duration: 0.7s, 0.7s, 0.15s;
-    transition-timing-function: ease;
-}
-  
-.content_icon:active:after {
-    opacity: 0;
-}
-
 /* CARD FACE */
 .container .card .face {
     width: 320px;
@@ -246,6 +206,16 @@ body {
 }
 
 /* CONTACT */
+.contact {
+    margin: 100px 0 50px 0;
+    padding: 10px 0 50px 0;
+}
+
+.contact h2 {
+    margin: 20px 0 20px;
+    text-align: center;
+    color: white;
+}
 
 .contact_links {
     display: flex;
@@ -253,7 +223,8 @@ body {
 }
 
 .contact_icon {
-    padding: 20px 20px 20px 20px;
+    padding: 20px;
+    margin-bottom: 50px;
 }
 
 /* TABLET */
