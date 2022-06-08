@@ -10,7 +10,7 @@
 
 h1 {
     font-family: "Raleway", sans-serif;
-    font-size: 80px;
+    font-size: 70px;
     color: white;
     margin: 0;
 }
@@ -60,30 +60,40 @@ body {
 .inner {
     width: 320px;
     margin: 0% auto;
-    border: 1px solid salmon;
 }
 
 /* NAVIGATION */
+nav {
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    background: rgb(221, 195, 223);
+    margin: 0;
+    width: 100%;
+    z-index: 3;
+}
+
 .logo_img {
     width: 320px;
-    margin-top: -70px;
+    margin-top: -90px;
+    object-fit:contain;
 }
 
 .nav_links {
-    margin-top: 20px;
+    padding-top: 25px;
     display: flex;
     gap: 10px;
 }
 
-
 /* ABOUT */
 .about-content {
+    margin-top: 80px;
     display: flex;
     align-items: center;
     flex-direction: column;
 }
 
-.about-content_text h1, .about-content_text h2 {
+.about-content_text h1, .about-content_text h2, .about-content_text h3 {
     margin-top: 20px;
     margin-bottom: 20px;
 }
