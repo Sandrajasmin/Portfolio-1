@@ -1,7 +1,8 @@
-$(document).ready(function(){
-    $('#text-drop').mouseleave(function(){
-      $(this).removeClass('clicked');
-    }).click(function(){
-      $(this).addClass('clicked').html($(this).html());
-    });
-  });
+const navbar = document.querySelector('.nav-fixed');
+window.onscroll = () => {
+    if (window.scrollY > 300) {
+        navbar.classList.add('nav-active');
+    } else {
+        navbar.classList.remove('nav-active');
+    }
+};

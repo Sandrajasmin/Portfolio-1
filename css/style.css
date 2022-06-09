@@ -1,6 +1,7 @@
 @import url(/css/import/animation.css);
 @import url(/css/import/shine.css);
 @import url(/css/import/contact.css);
+
 * {
     margin: 0;
     padding: 0;
@@ -64,25 +65,43 @@ body {
 
 /* NAVIGATION */
 nav {
-    overflow: hidden;
     position: fixed;
     top: 0;
-    background: rgb(221, 195, 223);
     margin: 0;
     width: 100%;
-    z-index: 3;
-}
-
-.logo_img {
-    width: 320px;
-    margin-top: -90px;
-    object-fit:contain;
-}
+    box-shadow: 0 0 1rem 0 rgba(0, 0, 0, .2); 
+    border-radius: 5px;
+    z-index: 4;
+    background: inherit;
+    overflow: hidden;
+  }
+  
+nav:before {
+    content: "";
+    position: absolute;
+    background: inherit;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    box-shadow: inset 0 0 2000px rgba(255, 255, 255, .5);
+    filter: blur(10px);
+    margin: -20px;
+  }
 
 .nav_links {
+    position: relative;
+    padding-left: 15px;
     padding-top: 25px;
     display: flex;
     gap: 10px;
+    z-index: 5;
+}
+
+.logo_img {
+    width: 100%;
+    margin-top: -30px;
 }
 
 /* ABOUT */
@@ -98,17 +117,21 @@ nav {
     margin-bottom: 20px;
 }
 
-.about-content > img {
+.profile_img {
+    position: relative;
     width: 320px;
-    z-index: 1;
+    z-index: 2;
 }
 
 /* CARDS */
 
+.portfolio_head {
+    text-align: center;
+}
+
 .portfolio-content {
     margin: 0;
     padding: 0;
-    min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;  
@@ -237,14 +260,29 @@ nav {
     margin-bottom: 50px;
 }
 
+
 /* TABLET */
 @media screen and (min-width: 481px) { 
     .inner {
-        width: 600px;
+        width: 700px;
     }
 
-    .content_img, .container .card .face {
-        width: 500px;
+    #section-1 {
+        padding-top: 50px;
+    }
+
+    #section-2 {
+        padding-top: 80px;
+    }
+
+    #section-3 {
+        height: 100vh;
+        display: flex;
+        align-items: center;
+    }
+
+    .contact {
+        margin: 0;
     }
 }
   
@@ -255,29 +293,38 @@ nav {
       width: 900px;
     }
 
-    .logo_img {
-        width: 100%;
-        height: 94px;
-        margin-top: -50px;
+    #section-1{
+        height: 100vh;
     }
 
-    .portfolio-content {
-        margin: 0;
-        padding: 0;
-        min-height: 100vh;
+    .about-content{
+        margin-top: 190px;
         display: flex;
-        justify-content: center;
-        align-items: center;  
-    }
-    
-    .content_img, .container .card .face {
-        width: 900px;
+        align-items: center;
+        flex-direction: row;
     }
 
-    .content_img {
-        height: 400px;
+    #section-2 {
+        height: 100vh;
     }
 
+    .portfolio_head {
+        padding-top: 20px;
+    }
+
+    .container{
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+    }
+
+    #section-3 {
+        height: 100vh;
+    }
+
+    .contact {
+        padding-top: 93px;
+    }
 }
   
   /* BIG SCREEN*/
@@ -285,6 +332,14 @@ nav {
     .inner {
       margin: 0% auto;
       width: 1200px;
+    }
+
+    #section-2 {
+        padding-top: 200px;
+    }
+
+    .container {
+        gap: 50px;
     }
 }
   
