@@ -76,9 +76,9 @@
     transition-property: left, top, opacity;
     transition-duration: 0.7s, 0.7s, 0.15s;
     transition-timing-function: ease;
-  }
+}
 
   
 .contact_icon:active:after {
     opacity: 0;
-  }
+}
