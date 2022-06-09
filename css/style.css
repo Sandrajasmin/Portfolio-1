@@ -62,6 +62,10 @@ body {
     margin: 0% auto;
 }
 
+a:hover, a:active {
+    color: #4393D9;
+}
+
 /* NAVIGATION */
 nav {
     position: fixed;
